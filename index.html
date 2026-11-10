@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Omnix — Instant search. Effortless space.</title>
+<meta name="description" content="Omnix is a private assistant for the files on your Mac. Find any document by what it means, even scans and pictures, get answers from your documents, see a map of your disk and free up space safely. Everything stays on your Mac.">
+<meta name="theme-color" content="#f6f7f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111612" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Omnix — Ask your Mac anything about your files">
+<meta property="og:description" content="Find any document by what's inside it, get answers from your files, and free up space safely. Private, on-device, no account.">
+<meta property="og:image" content="https://ishankpujari.github.io/omnix-website/assets/og.png">
+<meta property="og:url" content="https://ishankpujari.github.io/omnix-website/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="index.html" aria-label="Omnix home"><picture><source srcset="assets/omnix-mark@2x.png" media="(prefers-color-scheme: dark)"><img src="assets/omnix-mark-light@2x.png" alt="" width="46" height="26"></picture><span class="logo-name"><span class="logo-word">Omnix</span><span class="logo-tagline"><span>Instant search.</span><span>Effortless space.</span></span></span></a>
+    <nav aria-label="Sections">
+      <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#install">Install</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="button small" data-download href="#install">Download</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <span class="pill"><span class="dot"></span> Free private beta · macOS</span>
+        <h1>Ask your Mac anything about your files.</h1>
+        <p class="lede">Omnix finds any file by what it means, even scans and pictures, answers questions from your documents, maps your disk and frees up space safely. <strong>Everything stays on your Mac.</strong></p>
+        <div class="cta">
+          <a class="button" data-download href="#install">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.7c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.8 1.2 1.8 2.6 3.1 2.5 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.4-.9-2.4-3.3zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>
+            Download for Mac
+          </a>
+          <a class="link" href="#privacy">How your privacy works →</a>
+        </div>
+        <p class="fine">For Macs with Apple silicon (M1 or later). No account. Works offline.</p>
+      </div>
+
+      <!-- A live picture of the app (example files and numbers, not anyone's real ones) -->
+      <div class="window" role="img" aria-label="An example of the Omnix app: what fills the disk, a space map of it, answers from documents, expiry dates it noticed, and what is safe to clean up.">
+        <div class="window-bar"><span></span><span></span><span></span><b>Omnix</b></div>
+        <div class="window-body">
+          <aside class="mini-side" aria-hidden="true">
+            <div class="mini-brand"><picture><source srcset="assets/omnix-mark@2x.png" media="(prefers-color-scheme: dark)"><img src="assets/omnix-mark-light@2x.png" alt="" width="32" height="18"></picture><span class="logo-word">Omnix</span></div>
+            <div class="mini-link" data-tab="storage">Storage <kbd>⌘1</kbd></div>
+            <div class="mini-link on" data-tab="ask">Ask <kbd>⌘2</kbd></div>
+            <div class="mini-link" data-tab="cleanup">Clean up <kbd>⌘3</kbd></div>
+            <div class="mini-link" data-tab="settings">Settings <kbd>⌘,</kbd></div>
+            <div class="mini-disk"><b>182 GB free</b><i><em style="width:64%"></em></i><small>of 512 GB</small></div>
+          </aside>
+          <div class="mini-chat" aria-hidden="true">
+            <!-- Ask: an answer from inside a document -->
+            <div class="convo" data-convo data-name="lease" data-tab="ask">
+              <div class="bubble">When does my lease end?</div>
+              <div class="answer">
+                <span class="tag">Answer from your document</span>
+                <strong>July 31, 2026</strong>
+                <blockquote>“The term of this lease ends on <mark>July 31, 2026</mark>…”</blockquote>
+                <small>Lease_2025.pdf · page 2 · read from a scan</small>
+              </div>
+            </div>
+            <!-- Ask: added up across many documents -->
+            <div class="convo" data-convo data-name="rent" data-tab="ask" hidden>
+              <div class="bubble">How much rent did I pay in 2025?</div>
+              <div class="answer">
+                <span class="tag">Added up from 12 receipts</span>
+                <strong>$22,200.00</strong>
+                <ul class="rows">
+                  <li><b>$1,850.00</b><span>Jan 1 · rent-receipt-jan.pdf</span></li>
+                  <li><b>$1,850.00</b><span>Feb 1 · rent-receipt-feb.pdf</span></li>
+                  <li class="more">…and 10 more, each with its file</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Ask: a picture by what it shows -->
+            <div class="convo" data-convo data-name="picture" data-tab="ask" hidden>
+              <div class="bubble">The photo of the whiteboard from our meeting</div>
+              <div class="answer">
+                <span class="tag good">Found by what the picture shows</span>
+                <div class="picture-hit"><span class="thumb" aria-hidden="true"><i></i><i></i><i></i></span><div><strong class="name">IMG_4821.HEIC</strong><small>Photos · March 14 · the name says nothing, the picture matches</small></div></div>
+              </div>
+            </div>
+            <!-- Ask: several steps in one request -->
+            <div class="convo" data-convo data-name="plan" data-tab="ask" hidden>
+              <div class="bubble">Find my work permit and tell me when it expires</div>
+              <div class="answer">
+                <span class="tag">2 steps · both found</span>
+                <ul class="checks">
+                  <li class="ok">Found it <small>EAD_card_front.pdf</small></li>
+                  <li class="ok">Expires August 4, 2029 <small>“Card expires 08/04/29”</small></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Ask: a checklist of documents -->
+            <div class="convo" data-convo data-name="checklist" data-tab="ask" hidden>
+              <div class="bubble">What documents do I need for a passport renewal?</div>
+              <div class="answer">
+                <span class="tag">Checklist · found on this Mac</span>
+                <ul class="checks">
+                  <li class="ok">Current passport <small>Passport_scan.pdf</small></li>
+                  <li class="ok">Passport photo <small>photo_2x2.jpg</small></li>
+                  <li class="miss">Form DS-82 <small>not found</small></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Storage: what fills the disk -->
+            <div class="convo" data-convo data-name="storage" data-tab="storage" hidden>
+              <div class="panel-title">Storage <small>example Mac</small></div>
+              <div class="answer">
+                <span class="tag">330 GB used of 512 GB</span>
+                <div class="stack" aria-hidden="true"><i style="width:28%;--c:#7fa36b"></i><i style="width:22%;--c:#c9a45c"></i><i style="width:17%;--c:#6b8fa3"></i><i style="width:12%;--c:#a37f9b"></i><i style="width:21%;--c:#b9bfb3"></i></div>
+                <ul class="legend">
+                  <li><i style="--c:#7fa36b"></i>Photos &amp; videos <b>92 GB</b></li>
+                  <li><i style="--c:#c9a45c"></i>Apps <b>73 GB</b></li>
+                  <li><i style="--c:#6b8fa3"></i>Developer files <b>56 GB</b></li>
+                  <li><i style="--c:#a37f9b"></i>Documents <b>40 GB</b></li>
+                  <li><i style="--c:#b9bfb3"></i>macOS &amp; other <b>69 GB</b></li>
+                </ul>
+                <small>At this pace, full in about 8 months.</small>
+              </div>
+            </div>
+            <!-- Clean up: what's safe to remove, and why -->
+            <div class="convo" data-convo data-name="cleanup" data-tab="cleanup" hidden>
+              <div class="panel-title">Clean up <small>example Mac</small></div>
+              <div class="answer">
+                <span class="tag good">16.5 GB you can free, safely</span>
+                <ul class="rows cleanup">
+                  <li><b>6.8 GB</b><span>Xcode build files · rebuilt</span><em>Safe</em></li>
+                  <li><b>5.2 GB</b><span>Unused iCloud files</span><em class="blue">Offload</em></li>
+                  <li><b>3.1 GB</b><span>Big video · half the size</span><em class="blue">Shrink</em></li>
+                  <li><b>1.4 GB</b><span>Left by a deleted app (Notion)</span><em class="review">Review</em></li>
+                </ul>
+                <small>Every item says why it’s safe. Undo is in the history.</small>
+              </div>
+            </div>
+            <!-- Storage: the space map -->
+            <div class="convo" data-convo data-name="map" data-tab="storage" hidden>
+              <div class="panel-title">Space map <small>example Mac</small></div>
+              <div class="map-demo">
+                <svg class="mini-sunburst" viewBox="0 0 220 220" aria-hidden="true"><path d="M110.0,36.0 A74,74 0 0 1 164.6,160.0 L141.0,138.4 A42,42 0 0 0 110.0,68.0 Z" fill="#5d6470" class="tip"><title>Library</title></path><path d="M110.0,6.0 A104,104 0 0 1 164.6,21.5 L149.9,45.3 A76,76 0 0 0 110.0,34.0 Z" fill="#d39a2c" fill-opacity=".8"><title>Caches</title></path><path d="M164.6,21.5 A104,104 0 0 1 197.8,54.3 L174.2,69.3 A76,76 0 0 0 149.9,45.3 Z" fill="#4f9a5c" fill-opacity=".8"><title>Developer</title></path><path d="M197.8,54.3 A104,104 0 0 1 212.2,129.5 L184.7,124.2 A76,76 0 0 0 174.2,69.3 Z" fill="#5d6470" fill-opacity=".8"><title>App data</title></path><path d="M212.2,129.5 A104,104 0 0 1 190.1,176.3 L168.6,158.4 A76,76 0 0 0 184.7,124.2 Z" fill="#5d6470" fill-opacity=".8"><title>Containers</title></path><path d="M164.6,160.0 A74,74 0 0 1 86.3,180.1 L96.5,149.8 A42,42 0 0 0 141.0,138.4 Z" fill="#8a96a6" class="tip"><title>Movies</title></path><path d="M186.7,180.2 A104,104 0 0 1 157.8,202.4 L144.9,177.5 A76,76 0 0 0 166.1,161.3 Z" fill="#4a7fc1" fill-opacity=".8"><title>Screen recordings</title></path><path d="M157.8,202.4 A104,104 0 0 1 91.8,212.4 L96.7,184.8 A76,76 0 0 0 144.9,177.5 Z" fill="#8a96a6" fill-opacity=".8"><title>Trips</title></path><path d="M86.3,180.1 A74,74 0 0 1 38.1,127.5 L69.2,119.9 A42,42 0 0 0 96.5,149.8 Z" fill="#8a96a6"><title>Pictures</title></path><path d="M76.6,208.5 A104,104 0 0 1 11.9,144.6 L38.3,135.3 A76,76 0 0 0 85.6,182.0 Z" fill="#8a96a6" fill-opacity=".8"><title>Photos Library</title></path><path d="M38.1,127.5 A74,74 0 0 1 43.9,76.8 L72.5,91.2 A42,42 0 0 0 69.2,119.9 Z" fill="#8a96a6"><title>Projects</title></path><path d="M9.0,134.6 A104,104 0 0 1 6.0,108.7 L34.0,109.0 A76,76 0 0 0 36.2,128.0 Z" fill="#4f9a5c" fill-opacity=".8"><title>node_modules</title></path><path d="M6.0,108.7 A104,104 0 0 1 7.4,93.1 L35.0,97.6 A76,76 0 0 0 34.0,109.0 Z" fill="#4f9a5c" fill-opacity=".8"><title>builds</title></path><path d="M43.9,76.8 A74,74 0 0 1 65.0,51.2 L84.5,76.7 A42,42 0 0 0 72.5,91.2 Z" fill="#d39a2c"><title>Downloads</title></path><path d="M17.0,63.4 A104,104 0 0 1 29.9,43.7 L51.4,61.6 A76,76 0 0 0 42.1,75.9 Z" fill="#d39a2c" fill-opacity=".8"><title>Installers</title></path><path d="M65.0,51.2 A74,74 0 0 1 88.0,39.3 L97.5,69.9 A42,42 0 0 0 84.5,76.7 Z" fill="#d39a2c" class="tip"><title>.ollama</title></path><path d="M46.8,27.4 A104,104 0 0 1 79.1,10.7 L87.4,37.4 A76,76 0 0 0 63.8,49.7 Z" fill="#d39a2c" fill-opacity=".8"><title>AI models</title></path><path d="M88.0,39.3 A74,74 0 0 1 110.0,36.0 L110.0,68.0 A42,42 0 0 0 97.5,69.9 Z" fill="#8a96a6"><title>Documents</title></path><path d="M79.1,10.7 A104,104 0 0 1 86.7,8.6 L93.0,35.9 A76,76 0 0 0 87.4,37.4 Z" fill="#8a96a6" fill-opacity=".8"><title>Taxes</title></path><circle cx="110" cy="110" r="40" class="hole"/><text x="110" y="106">Home</text><text x="110" y="122" class="big">250 GB</text></svg>
+                <div class="map-demo-side">
+                  <span class="tag">Look here first</span>
+                  <p><b>.ollama</b> 14 GB · AI models not used in 8 months</p>
+                  <p><b>Screen recordings</b> 14 GB · can shrink to half</p>
+                  <p><b>Developer</b> 18 GB · Clean up can free it</p>
+                  <ul class="map-demo-legend"><li><i style="background:#4f9a5c"></i>Safe to clean</li><li><i style="background:#4a7fc1"></i>Can take less space</li><li><i style="background:#d39a2c"></i>Worth a look</li><li><i style="background:#8a96a6"></i>Yours</li><li><i style="background:#5d6470"></i>macOS and apps</li></ul>
+                </div>
+              </div>
+            </div>
+            <!-- Ask: what Omnix noticed -->
+            <div class="convo" data-convo data-name="noticed" data-tab="ask" hidden>
+              <div class="panel-title">What Omnix noticed <small>example</small></div>
+              <div class="answer noticed-demo">
+                <p><b>Your passport expires on March 14, 2027 · in 4 months</b><small>From Passport_scan.pdf, where it says “Date of expiry 14 MAR 2027” · renewals can take weeks</small></p>
+                <p><b>Your lease ends on July 31, 2026</b><small>From Lease_2025.pdf, where it says “ends on July 31, 2026”</small></p>
+                <small>Omnix reminds you before each one, and only says what it can show you the proof for.</small>
+              </div>
+            </div>
+            <div class="mini-input" data-input><span>Ask anything about your files…</span><b>Ask</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promise strip -->
+  <section class="promise" aria-label="Promises">
+    <div class="wrap promise-inner">
+      <span>No account</span><span>Works offline</span><span>AI that runs on your Mac</span><span>Nothing uploaded</span><span>Encrypted on your Mac</span><span>Nothing changes without your click</span>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <p class="kicker">What it does</p>
+      <h2>Like a librarian and a careful cleaner for your Mac.</h2>
+      <div class="grid">
+        <article class="card wide">
+          <div class="icon" aria-hidden="true">🔎</div>
+          <h3>Find anything by describing it, in any words</h3>
+          <p>“The contract I signed with my landlord last year.” “Papers that let me work in the US” finds your work permit, even though it never says those words. Omnix understands what documents mean, plus dates, places, types and sizes, and shows why each result matched. Files you open come first next time.</p>
+          <div class="examples"><span>my W-2 from 2025</span><span>the latest screenshot</span><span>papers for my visa</span><span>files over 1 GB</span></div>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🖼️</div>
+          <h3>Finds pictures by what they show</h3>
+          <p>“My logo”, “the whiteboard photo”, “a picture of my license”: found even when the file is called “Screenshot 2025-08-27”.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">📄</div>
+          <h3>Reads scans and photos</h3>
+          <p>A photo of your license or a scanned lease is searchable too, read on your Mac.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">💬</div>
+          <h3>Answers from your documents</h3>
+          <p>“When does my lease end?” gets the answer with the exact quote. “How much rent did I pay in 2025?” adds it up across your receipts, file by file.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">📅</div>
+          <h3>Notices what matters</h3>
+          <p>Your passport expires in 4 months? Omnix tells you, shows where it read it, and reminds you before it’s too late.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🗺️</div>
+          <h3>A map of your disk</h3>
+          <p>Your disk as rings, coloured by what’s safe to clean, by type or by age. It points out what to look at first, and shows the result before you clean.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🧹</div>
+          <h3>Space you can safely take back</h3>
+          <p>Caches, build folders, duplicates, deleted apps’ leftovers and blurry photos, plus ways to keep files and use less space: offload to iCloud, shrink videos, zip old projects. Each says why it’s safe; everything can be undone.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🛡️</div>
+          <h3>“Is it safe to delete?”</h3>
+          <p>For anything on your Mac: can it be rebuilt, is your code backed up, is there a copy, does it look important. Then a clear verdict.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🗂️</div>
+          <h3>Organize and clean by asking</h3>
+          <p>“Put my tax files in one folder.” “Delete my 2023 screenshots.” “Find my lease and tell me when it ends.” You see the plan first, and every change can be undone. New downloads get a suggested folder too.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">☁️</div>
+          <h3>Searches where your files are</h3>
+          <p>Your Home folder and iCloud Drive, plus Google Drive, Dropbox and OneDrive folders from their Mac apps. If you turn them on: Mail attachments, your Photos library and Apple Notes.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">✅</div>
+          <h3>Document checklists</h3>
+          <p>“What do I need for an apartment?” Get the list, with what’s already on your Mac and what’s missing.</p>
+        </article>
+        <article class="card full">
+          <div class="icon" aria-hidden="true">⌥</div>
+          <h3>Always one keystroke away</h3>
+          <p>Quick search with ⌥ Space from any app, a menu bar icon with free space, Finder right-click, and Siri Shortcuts.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section class="section dark" id="privacy">
+    <div class="wrap privacy">
+      <div>
+        <p class="kicker">Privacy</p>
+        <h2>Your files never leave your Mac.</h2>
+        <p class="lede">Most AI tools send your documents to a server to read them. Omnix doesn’t. It has no account, never uploads anything, and does all of its reading and thinking on your Mac. Its only internet connection is checking for updates, which you can turn off.</p>
+        <a class="link light" href="privacy.html">Read the full privacy policy →</a>
+      </div>
+      <ul class="facts">
+        <li><b>On-device AI only.</b> Omnix’s own AI models (for meaning and pictures) are built into the app, and answers can use Apple’s on-device model. All of it runs on your Mac. Not ChatGPT, not any cloud AI.</li>
+        <li><b>Encrypted on your Mac.</b> What it saves for fast search is encrypted with a key in your Keychain, with sensitive information hidden.</li>
+        <li><b>You’re in control.</b> Every move or delete shows a plan first, goes to the Trash, and can be undone. Photos, Notes and Mail are off until you turn them on.</li>
+        <li><b>No tracking.</b> No analytics, no ads, no automatic crash reports. This website has no trackers either.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section">
+    <div class="wrap">
+      <p class="kicker">How it works</p>
+      <h2>Three steps. No setup.</h2>
+      <ol class="steps">
+        <li><span>1</span><h3>Open Omnix</h3><p>It quietly reads your Home folder, iCloud Drive and cloud drive folders: file names, documents, scans and photos.</p></li>
+        <li><span>2</span><h3>It reads on your Mac</h3><p>The first read takes a few minutes. After that, only new or changed files are read again.</p></li>
+        <li><span>3</span><h3>Just ask</h3><p>Type a question in plain words, or press ⌥ Space from anywhere.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="section soft">
+    <div class="wrap">
+      <p class="kicker">Why Omnix</p>
+      <h2>Made for your personal files.</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th></th><th>Omnix</th><th>Spotlight</th><th>Cloud AI assistants</th></tr></thead>
+          <tbody>
+            <tr><td>Find files by describing them</td><td class="yes">Yes</td><td class="part">Names and keywords</td><td class="part">Files you upload</td></tr>
+            <tr><td>Reads scans and photos ahead of time</td><td class="yes">Yes</td><td class="part">Some</td><td class="no">No</td></tr>
+            <tr><td>Finds pictures by what they show</td><td class="yes">Yes</td><td class="part">Photos app only</td><td class="part">Pictures you upload</td></tr>
+            <tr><td>Reminds you before IDs and leases expire</td><td class="yes">Yes</td><td class="no">No</td><td class="no">No</td></tr>
+            <tr><td>Answers with the quote and page</td><td class="yes">Yes</td><td class="no">No</td><td class="part">Yes, after upload</td></tr>
+            <tr><td>Safe-to-delete checks, cleanup and a disk map</td><td class="yes">Yes</td><td class="no">No</td><td class="no">No</td></tr>
+            <tr><td>Your documents stay on your Mac</td><td class="yes">Always</td><td class="yes">Yes</td><td class="no">Sent to servers</td></tr>
+            <tr><td>Account needed</td><td class="yes">No</td><td class="yes">No</td><td class="no">Yes</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Install -->
+  <section class="section" id="install">
+    <div class="wrap install">
+      <div>
+        <p class="kicker">Install</p>
+        <h2>Get the beta.</h2>
+        <p class="lede">Free while in beta. Needs a Mac with Apple silicon (M1 or later). Answers from inside documents need Apple Intelligence turned on; everything else works without it.</p>
+        <a class="button" data-download href="#install">Download Omnix.dmg</a>
+        <p class="fine" data-version>Version 0.1.0 beta</p>
+      </div>
+      <ol class="install-steps">
+        <li><b>Open the downloaded file</b> and drag <b>Omnix</b> into <b>Applications</b>.</li>
+        <li><b>Open Omnix.</b> Because this beta isn’t notarized by Apple yet, macOS stops it the first time. Go to <b>System Settings › Privacy &amp; Security</b>, scroll down, click <b>Open Anyway</b>, and confirm.</li>
+        <li><b>Click Allow</b> when macOS asks about your Documents, Desktop, Downloads and iCloud Drive. That’s what lets Omnix search them.</li>
+        <li><b>Look around.</b> Omnix opens on Storage, with the space map. While it reads your files (a few minutes the first time), try Ask: “find my lease” or “when does my passport expire?”.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Beta feedback -->
+  <section class="section soft" id="feedback">
+    <div class="wrap feedback">
+      <div>
+        <p class="kicker">Beta</p>
+        <h2>Help shape Omnix.</h2>
+        <p>When an answer is wrong, tap <b>Wrong answer?</b> under it. Reports stay on your Mac until you choose to export them in <b>Settings</b> and send them. If something breaks, <b>Settings › Create problem report</b> writes a short report (no file names) for you to send.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap narrow">
+      <p class="kicker">FAQ</p>
+      <h2>Questions.</h2>
+      <details><summary>Is it free?</summary><p>Yes, while it’s in beta.</p></details>
+      <details><summary>Does Omnix use ChatGPT or send my files anywhere?</summary><p>No. It uses only Apple’s on-device model, which runs on your Mac. Omnix never sends your files or questions anywhere and has no account. Its only internet connection is checking for updates, which you can turn off. Search, safety checks and cleanup follow fixed rules and work even without Apple Intelligence.</p></details>
+      <details><summary>What does it save, and where?</summary><p>The text it has read, what your files mean, your chat, Clean up’s history and your undo history, in its own folder on your Mac (~/Library/Application Support/com.omnix.desktop), encrypted, with sensitive numbers hidden. You can delete any of it in Settings.</p></details>
+      <details><summary>How do updates work?</summary><p>Once a day Omnix checks whether a newer version is out. If there is one, it shows “Update now”, and one click downloads, installs and restarts it. Your search, settings and history stay. The check sends nothing about you or your files, and you can turn it off in Settings.</p></details>
+      <details><summary>Why is the download so big?</summary><p>About 700 MB, because the AI that understands your documents and pictures is built into the app instead of running on a server. That’s what lets it work offline and keep your files private.</p></details>
+      <details><summary>Does it search Google Drive, Dropbox or OneDrive?</summary><p>Yes, if you use their Mac apps: those apps keep a folder on your Mac, and Omnix searches it like any other folder. Files kept online only are found by name; Omnix never downloads them. Omnix doesn’t sign in to these services.</p></details>
+      <details><summary>Can it clean up my Gmail or Google Photos?</summary><p>No. Those live on Google’s servers, and Omnix never connects to them. To see what fills your Google storage, use Google’s own page at one.google.com/storage.</p></details>
+      <details><summary>Does it look at my Photos library or Notes?</summary><p>Only if you turn them on in Settings, and macOS asks for your permission first. Omnix never changes your notes; anything it removes from Photos goes to Recently Deleted for 30 days.</p></details>
+      <details><summary>Can it delete my files by mistake?</summary><p>It never deletes on its own. Every change shows a plan first and waits for your click. Deleting means moving to the Trash, where you can put it back, and most changes have Undo.</p></details>
+      <details><summary>Does it work on Intel Macs?</summary><p>Not in this beta. It needs a Mac with Apple silicon (M1 or later).</p></details>
+      <details><summary>Do I need Apple Intelligence?</summary><p>No. It makes some answers smarter (reading answers out of documents, custom checklists, planning long requests and chat). Search by meaning, pictures, expiry dates, totals, cleanup and organizing all work without it.</p></details>
+      <details><summary>How do I uninstall it?</summary><p>Quit Omnix, drag it from Applications to the Trash, and delete the folder ~/Library/Application Support/com.omnix.desktop. If you added it to Finder, also delete ~/Library/Services/Ask Omnix.workflow (or click Remove from Finder in Settings first).</p></details>
+    </div>
+  </section>
+
+  <!-- Final call -->
+  <section class="final">
+    <div class="wrap final-inner">
+      <img src="assets/icon-256.png" alt="" width="96" height="96">
+      <h2>Your files, finally easy to find.</h2>
+      <a class="button" data-download href="#install">Download for Mac</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 Omnix</span>
+    <nav aria-label="Legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  </div>
+</footer>
+</body>
+</html>

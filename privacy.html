@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Omnix Privacy</title>
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<style>
+/* Layout: one readable column, a short summary band, then plain sections; tables for what's stored. */
+:root {
+  --paper: #fafbf8;
+  --ink: #26332b;
+  --muted: #66706a;
+  --line: #e2e7df;
+  --accent: #6f8237;
+  --tint: #eef3e1;
+  --display: 'Manrope', 'Avenir Next', system-ui, sans-serif;
+  --body: 'Manrope', 'Avenir Next', system-ui, sans-serif;
+  --mono: 'DM Mono', 'SFMono-Regular', Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #171b18; --ink: #dfe6e0; --muted: #a1aba3; --line: #2c342e; --accent: #b4c879; --tint: #222b1f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #171b18; --ink: #dfe6e0; --muted: #a1aba3; --line: #2c342e; --accent: #b4c879; --tint: #222b1f;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+main { max-width: 760px; margin: 0 auto; padding: 56px 20px 80px; display: grid; gap: 36px; }
+header { display: grid; gap: 10px; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+h1 { font-family: var(--display); font-size: clamp(30px, 5vw, 42px); line-height: 1.15; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h2 { font-family: var(--display); font-size: 22px; margin: 0 0 10px; text-wrap: balance; }
+p, li { max-width: 65ch; }
+p { margin: 0 0 12px; }
+ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.lede { font-size: 18px; color: var(--muted); }
+.summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; padding: 18px; border-radius: 10px; background: var(--tint); }
+.summary div { display: grid; gap: 2px; }
+.summary strong { font-size: 15px; }
+.summary span { color: var(--muted); font-size: 14px; line-height: 1.45; }
+section { display: grid; gap: 4px; padding-top: 28px; border-top: 1px solid var(--line); }
+.table-wrap { overflow-x: auto; margin-top: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); }
+th { font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+td:first-child { font-weight: 600; width: 32%; }
+code { font-family: var(--mono); font-size: 13.5px; background: var(--tint); padding: 1px 5px; border-radius: 4px; word-break: break-word; }
+.note { color: var(--muted); font-size: 14px; }
+footer { color: var(--muted); font-size: 14px; padding-top: 24px; border-top: 1px solid var(--line); }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<main>
+  <p style="margin:0"><a href="index.html" style="text-decoration:none;font-weight:600">← Omnix</a></p>
+  <header>
+    <span class="eyebrow">Omnix for Mac · Privacy</span>
+    <h1>Your files stay on your Mac</h1>
+    <p class="lede">Omnix helps you find, understand, organize and clean up your files. All of that happens on your Mac. Omnix doesn't upload your files or anything in them, doesn't need an account, and doesn't send anything about you or your files over the internet. Its only internet connection is checking for updates, which you can turn off.</p>
+  </header>
+
+  <div class="summary" aria-label="Summary">
+    <div><strong>Nothing is uploaded</strong><span>Omnix's only internet connection is a check for updates. It sends nothing about you or your files.</span></div>
+    <div><strong>No account, no tracking</strong><span>No sign-in, analytics, ads or automatic crash reports.</span></div>
+    <div><strong>Nothing changes without you</strong><span>Every move or cleanup waits for your click and can be undone.</span></div>
+  </div>
+
+  <section>
+    <h2>What Omnix reads</h2>
+    <p>To answer questions like “find my lease from last year”, Omnix reads files in your <strong>Home folder</strong> and <strong>iCloud Drive</strong>:</p>
+    <ul>
+      <li>file and folder names, sizes and dates;</li>
+      <li>the text inside documents such as PDFs, Word, Pages, Excel and text files;</li>
+      <li>the text in scans, screenshots and photos, using Apple's on-device text recognition, and simple labels for what photos show (for example “dog” or “document”);</li>
+      <li>what macOS's Spotlight already knows about your files on this Mac, such as the text in images and when you last opened a file.</li>
+    </ul>
+    <p>It skips hidden folders, your Library folder (except iCloud Drive), apps, code dependencies, and files named like passwords or keys. Files stored only in iCloud are found by name and never downloaded, unless you choose to open one.</p>
+    <p>When a new document arrives in your Downloads folder while Omnix is open, it reads that file on this Mac to suggest the folder it belongs in. Nothing moves until you click, and you can turn this off in Settings.</p>
+    <p><strong>Optional:</strong> if you give Omnix Full Disk Access in System Settings, it can also search documents attached to emails in Apple Mail (never the emails themselves) and measure Messages attachments and old iPhone backups. You can turn Mail search off in Omnix’s Settings, and Omnix never moves or deletes anything in Mail or Messages.</p>
+  </section>
+
+  <section>
+    <h2>Search by meaning</h2>
+    <p>To find files by what they mean, not only by their words (“visa interview papers” finds a consular appointment letter), Omnix includes an open-source language model, <strong>bge-base-en-v1.5</strong> by BAAI (MIT license). It's part of the app and runs on your Mac. Omnix never downloads it or anything else, and nothing it reads is sent anywhere. It turns each passage of your documents, and the names of your files and folders, into lists of numbers that describe their meaning. Your question is turned into numbers the same way and compared with them.</p>
+    <p>A second open-source model, <strong>ms-marco-MiniLM-L12-v2</strong> (a “cross-encoder”, Apache 2.0 license), then double-checks the closest few dozen matches by reading each passage together with your question. It also runs on your Mac and keeps nothing.</p>
+
+    <h2>Learning from what you open</h2>
+    <p>When you open, preview or show a file from search results, Omnix remembers which file you chose for that question, so it comes first the next time you ask something similar. When you tap “Wrong answer?”, it remembers that the first result wasn't the one. These choices (your question's main words and the file's location) are saved on this Mac, encrypted, and count less over time. The last 2,000 are kept. They're deleted with “Forget what Omnix has read”.</p>
+
+    <h2>Answers from many documents</h2>
+    <p>For questions like “how much rent did I pay in 2025?” or “which IDs expire next year?”, Omnix picks out the amounts, dates and street addresses written in the documents it has already read and adds them up or lists them, showing the file each one came from. This is worked out in memory from text already on your Mac and isn't saved separately. Requests with several parts (“find my lease and tell me when it ends”) are run as separate searches and answers, one after another; with Apple Intelligence on, longer requests may be planned by Apple's on-device model first. Every step only reads; nothing is moved or changed.</p>
+
+    <h2>Finding pictures by what they show</h2>
+    <p>To find pictures that have no words in them and names that say nothing (“my logo”, “a photo of my license”), Omnix also includes Google's open-source picture model <strong>SigLIP</strong> (base, patch 16, 224 pixels; Apache 2.0 license). It's part of the app and runs on your Mac. Omnix shrinks each picture on your Mac to a small square, turns it into a list of numbers that describe what it shows, and compares your question with them. Pictures are never sent anywhere. Pictures inside code projects and pictures stored only in iCloud aren't read.</p>
+
+    <h2>Cloud drives (Google Drive, Dropbox, OneDrive)</h2>
+    <p>If you use a cloud drive's Mac app, its files appear in a folder on your Mac (in Library › CloudStorage), and Omnix searches that folder like your other folders. It reads files that are downloaded to your Mac; files kept online only are found by name, and Omnix never downloads them. Omnix doesn't sign in to these services or connect to them: the cloud drive's own app keeps the folder in sync. Deleting a file in that folder deletes it from the cloud drive too, and Omnix says so before anything is deleted.</p>
+
+    <h2>Apple Photos and Apple Notes (off unless you turn them on)</h2>
+    <p>In Settings you can choose to also search your <strong>Photos library</strong> and <strong>Apple Notes</strong>. Each is off until you turn it on, and macOS asks for your permission first. With Photos on, Omnix lists the photos in your library (name and date) and looks at the small copy already on your Mac to describe what each shows, the same way as pictures in folders. Nothing is downloaded from iCloud and nothing in Photos is changed. With Notes on, Omnix reads the text of your notes through the Notes app so it can search them; locked notes stay locked, and Omnix can't edit, move or delete notes. Photos and notes are never copied: their text and names aren't saved by Omnix, only the numbers that describe what a photo shows or what a note means. Opening a result shows it in Photos or Notes. Turn either off any time in Settings.</p>
+
+    <h2>Updates</h2>
+    <p>Once a day, and when you click “Check now” in Settings, Omnix asks GitHub (where Omnix is published) whether a newer version is out. The request asks only for the newest version number; it carries no information about you, your files or how you use Omnix. Like any website visit, GitHub sees your internet address when it answers. If there's a newer version and you click “Update now”, Omnix downloads it from GitHub and checks its digital signature, so only updates made by Omnix's developer can install. You can turn this off with “Check for updates” in Settings; Omnix then never connects to the internet.</p>
+
+    <h2>Apple Intelligence</h2>
+    <p>When Apple Intelligence is turned on, Omnix uses Apple's on-device language model to read answers out of your documents (“when does my lease end?”), understand unusual wording, suggest checklists and reply when you chat. The model runs on your Mac; Omnix doesn't use Apple's cloud (Private Cloud Compute), ChatGPT or any other online AI, so its requests don't appear in your Apple Intelligence Report. Omnix checks answers against your documents and never sends your files or questions anywhere. Search, safety checks and cleanup are fixed rules and work without Apple Intelligence.</p>
+    <p class="note">One Apple setting to know about: if <strong>Share Mac Analytics</strong> is on (System Settings › Privacy &amp; Security › Analytics &amp; Improvements), Apple says it may learn aggregated, privacy-preserving trends about how Apple Intelligence is used across many Macs, without collecting individual content. That's Apple's system-wide setting, not something Omnix sends; turn it off if you prefer.</p>
+  </section>
+
+  <section>
+    <h2>What Omnix keeps, and where</h2>
+    <p>So that it can start instantly and keep a record of your actions, Omnix saves a few things in its own folder on your Mac, <code>~/Library/Application Support/com.omnix.desktop</code>. They're <strong>encrypted</strong> (AES-256) with a key kept in your macOS Keychain, so other programs and anyone who copies the files can't read them. Only your Mac user account can open this folder, and it's left out of Time Machine backups. All of it together is usually a few megabytes to a few dozen megabytes.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>What</th><th>Why</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>Text Omnix has read</td><td>Search works the moment the app opens; only new or changed files are read again.</td><td>Sensitive information, like ID and account numbers, is hidden before saving.</td></tr>
+          <tr><td>What your files mean</td><td>So search by meaning works at once; only new or changed files are read again.</td><td>Lists of numbers for each passage and file name, with the file's name and location and where each passage starts. Your documents' text isn't in it. A few megabytes; deleted with “Forget what Omnix has read”.</td></tr>
+          <tr><td>What your pictures show</td><td>So pictures can be found by what's in them at once; only new or changed pictures are read again.</td><td>A list of numbers for each picture, with its name and location. The pictures themselves aren't copied. Deleted with “Forget what Omnix has read”.</td></tr>
+          <tr><td>What you chose before</td><td>So the file you open for a question comes first next time.</td><td>The main words of each question and the location of the file you opened (or said was wrong). The last 2,000, counting less over time. Deleted with “Forget what Omnix has read”.</td></tr>
+          <tr><td>Clean up history</td><td>So you can see what Clean up freed and undo it.</td><td>What was freed, where it was and where it went (Trash, iCloud, a drive). The last 1,000. Deleted with “Forget what Omnix has read”.</td></tr>
+          <tr><td>Daily size notes</td><td>To tell how fast your Mac is filling up and why.</td><td>One note a day: how full the disk is and the sizes of a few folders (Downloads, Movies, app caches…). No file names. The last 120 days.</td></tr>
+          <tr><td>Expiry reminders</td><td>So Omnix reminds you before an ID, permit or lease expires, once per reminder, and never mentions a date you marked as renewed or wrong.</td><td>Which file and date you dismissed, and which reminders were sent. Expiry dates come only from what's printed next to an expiry label in your documents. Turn reminders off in Settings.</td></tr>
+          <tr><td>Your chat</td><td>Your conversation is still there next time.</td><td>The last 30 messages. Sensitive numbers are hidden the same way. Clear it any time.</td></tr>
+          <tr><td>Undo history</td><td>So you can undo a move, rename or delete, even after restarting.</td><td>File and folder locations only. The last 100 actions.</td></tr>
+          <tr><td>Items Omnix put in the Trash</td><td>To show how much space is waiting to be freed.</td><td>Locations and sizes only.</td></tr>
+          <tr><td>“Wrong answer” reports</td><td>So you can tell the developer what went wrong, if you choose.</td><td>Your question and what was shown, with sensitive numbers hidden. The last 200. Only leaves the Mac if you export them and send the file yourself.</td></tr>
+          <tr><td>Settings</td><td>Your choices, such as low-space alerts.</td><td>On or off choices only; not encrypted because there's nothing personal in them.</td></tr>
+          <tr><td>Disk usage and scan history</td><td>For the “when will my Mac be full” forecast.</td><td>One disk-usage number per day, plus folder names and totals. Kept in the app's own storage on this Mac.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">macOS also keeps a cache of the text-recognition model it prepares for Omnix. That cache contains no information about your files.</p>
+  </section>
+
+  <section>
+    <h2>What Omnix changes</h2>
+    <ul>
+      <li>Nothing moves, gets renamed or goes to the Trash until you see the plan and click to confirm.</li>
+      <li>Deleting means moving to the Trash. Omnix never empties your Trash; you do that in Finder.</li>
+      <li>Moves, renames, copies, new folders and deletes can be undone.</li>
+      <li>Similar photos (bursts and retakes) are only suggested for you to look at; the one with the most detail always stays.</li>
+      <li>Omnix only changes things in your own folders. It never touches macOS, Apple's apps, other apps' private data, or Docker's files (for Docker it shows you the command to run yourself).</li>
+      <li>Some Clean up suggestions free space without deleting, and each also waits for your click: <strong>offloading</strong> an iCloud file removes only the copy on your Mac (only files iCloud says are fully uploaded; it stays in iCloud and in Finder); <strong>shrinking a video</strong> makes a smaller HEVC copy on your Mac, checks it, then moves the original to the Trash; <strong>zipping an old project</strong> makes and checks a zip next to it, then moves the folder to the Trash; <strong>moving to a drive</strong> copies a file to the external drive you plugged in, checks the copy is identical, then moves the original to the Trash.</li>
+      <li>Blurry or accidental photos and saved memes are recognised on your Mac by Apple's built-in photo quality check and Omnix's own picture model. They're only suggested for you to look at.</li>
+      <li>If you've allowed Omnix to see your Photos library, Clean up can suggest extra burst shots, exact duplicates, old screenshots and screen recordings, and blurry photos there. Removing them goes through Photos (macOS asks you to confirm), so they stay in Recently Deleted for 30 days. Favourites are never suggested.</li>
+      <li>“Clean up by asking” (“delete everything from my old job except tax documents”) only shows a plan; you untick what to keep and click to confirm. IDs and immigration papers are left out unless you name them.</li>
+      <li>For WhatsApp, Telegram and Messages, Omnix only measures their media (with Full Disk Access) and tells you where to clean it up in the app, so your chats stay intact.</li>
+      <li>The optional <strong>weekly check</strong> (on in Settings, can be turned off) looks for space you can free safely and shows a notification on your Mac. It changes nothing.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Permissions</h2>
+    <p>Omnix works without special permissions. macOS keeps a few places private, such as iPhone backups and other apps' data, and Omnix doesn't ask to open them. If you choose to give Omnix Full Disk Access in System Settings, Smart cleanup can also list old iPhone and iPad backups. That's optional. If you turn on Photos or Notes search in Settings, macOS asks once for permission to read your Photos library or to let Omnix use the Notes app; you can change that any time in System Settings › Privacy &amp; Security.</p>
+  </section>
+
+  <section>
+    <h2>Your controls</h2>
+    <ul>
+      <li><strong>Forget what Omnix has read</strong> deletes the saved text. Omnix reads your files again the next time it opens.</li>
+      <li><strong>Clear chat</strong> or <strong>Forget chat history</strong> deletes your conversation.</li>
+      <li><strong>Forget local scan history</strong> deletes the disk-usage and scan history.</li>
+      <li><strong>Delete reports</strong> removes saved “wrong answer” reports.</li>
+      <li>Low-space alerts, Mail search, Photos and Notes search, and the Finder right-click item can each be turned off in Omnix’s Settings.</li>
+      <li><strong>Forget what Omnix has read</strong> also deletes what Omnix learned from the files you opened.</li>
+      <li>To remove everything, quit Omnix, move it to the Trash, and delete the folder <code>~/Library/Application Support/com.omnix.desktop</code>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Things outside Omnix</h2>
+    <p><strong>Problem reports</strong> are written to your Desktop only when you click “Create problem report”. They hold versions and counts, no file names or text, and you decide whether to send one.</p>
+    <p>The Finder right-click item and <code>omnix://</code> links (for Shortcuts and Siri) only open Omnix with a question. Nothing changes until you click in Omnix.</p>
+    <p>When you open a file from Omnix, it opens in its usual app (for example Preview), which has its own privacy rules. Opening a file that's only in iCloud asks macOS to download it. Apple's own features, such as Spotlight, iCloud and Apple Intelligence, follow Apple's privacy policy.</p>
+  </section>
+
+  <footer>
+    <p>Last updated November 6, 2026. If this page changes, the date above will change too.</p>
+  </footer>
+</main>
+</body>
+</html>

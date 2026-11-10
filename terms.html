@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Omnix Terms of Use</title>
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<style>
+/* Layout: one readable column, a short summary band, then plain sections; tables for what's stored. */
+:root {
+  --paper: #fafbf8;
+  --ink: #26332b;
+  --muted: #66706a;
+  --line: #e2e7df;
+  --accent: #6f8237;
+  --tint: #eef3e1;
+  --display: 'Manrope', 'Avenir Next', system-ui, sans-serif;
+  --body: 'Manrope', 'Avenir Next', system-ui, sans-serif;
+  --mono: 'DM Mono', 'SFMono-Regular', Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #171b18; --ink: #dfe6e0; --muted: #a1aba3; --line: #2c342e; --accent: #b4c879; --tint: #222b1f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #171b18; --ink: #dfe6e0; --muted: #a1aba3; --line: #2c342e; --accent: #b4c879; --tint: #222b1f;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+main { max-width: 760px; margin: 0 auto; padding: 56px 20px 80px; display: grid; gap: 36px; }
+header { display: grid; gap: 10px; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+h1 { font-family: var(--display); font-size: clamp(30px, 5vw, 42px); line-height: 1.15; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h2 { font-family: var(--display); font-size: 22px; margin: 0 0 10px; text-wrap: balance; }
+p, li { max-width: 65ch; }
+p { margin: 0 0 12px; }
+ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.lede { font-size: 18px; color: var(--muted); }
+.summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; padding: 18px; border-radius: 10px; background: var(--tint); }
+.summary div { display: grid; gap: 2px; }
+.summary strong { font-size: 15px; }
+.summary span { color: var(--muted); font-size: 14px; line-height: 1.45; }
+section { display: grid; gap: 4px; padding-top: 28px; border-top: 1px solid var(--line); }
+.table-wrap { overflow-x: auto; margin-top: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); }
+th { font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+td:first-child { font-weight: 600; width: 32%; }
+code { font-family: var(--mono); font-size: 13.5px; background: var(--tint); padding: 1px 5px; border-radius: 4px; word-break: break-word; }
+.note { color: var(--muted); font-size: 14px; }
+footer { color: var(--muted); font-size: 14px; padding-top: 24px; border-top: 1px solid var(--line); }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<main>
+  <p style="margin:0"><a href="index.html" style="text-decoration:none;font-weight:600">← Omnix</a></p>
+  <header>
+    <span class="eyebrow">Omnix for Mac · Terms of use</span>
+    <h1>Terms of use</h1>
+    <p class="lede">The short version: Omnix helps you find and tidy your files, but you decide what to move or delete, and you're responsible for keeping backups of anything important.</p>
+  </header>
+
+  <section>
+    <h2>Using Omnix</h2>
+    <ul>
+      <li>You may install and use Omnix on Macs you own or are allowed to use.</li>
+      <li>Don't use it on files you don't have the right to access, and follow your employer's rules before using it on a work computer.</li>
+      <li>Don't copy, resell or reverse-engineer the app except where the law allows it.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Your files are your responsibility</h2>
+    <ul>
+      <li>Omnix shows a plan and waits for your click before it moves, renames or deletes anything. Read the plan before you confirm.</li>
+      <li>Deleted items go to the macOS Trash. Once you empty the Trash they're gone, unless you have a backup.</li>
+      <li>Suggestions such as “safe to remove” are Omnix's best judgment from what's on your Mac. They can be wrong. Keep a backup (for example with Time Machine) of anything you can't lose.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Answers can be wrong</h2>
+    <p>Omnix reads your documents and, with Apple Intelligence, can answer questions from them and suggest which documents you need for things like a passport or a loan. These are helpful starting points, not official, legal, tax, medical or financial advice. Check important answers against the document itself and with the office or professional involved.</p>
+  </section>
+
+  <section>
+    <h2>Privacy</h2>
+    <p>Omnix works on your Mac and doesn't upload your files. The <a href="privacy.html">privacy page</a> explains exactly what it reads and keeps.</p>
+  </section>
+
+  <section>
+    <h2>No warranty</h2>
+    <p>Omnix is provided “as is”. To the extent the law allows, Omnix and its developer aren't liable for lost data, lost time or other damage from using it, including from files you chose to move or delete. Some places don't allow these limits, so they may not all apply to you.</p>
+  </section>
+
+  <section>
+    <h2>Changes</h2>
+    <p>These terms may change with new versions of Omnix. If they do, the date below will change too.</p>
+  </section>
+
+  <footer>
+    <p>Last updated November 6, 2026.</p>
+  </footer>
+</main>
+</body>
+</html>
