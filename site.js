@@ -3,7 +3,7 @@
 // ── Set these before publishing ────────────────────────────────────────────
 // The download: a GitHub Release asset named Omnix.dmg always works with "latest".
 const DOWNLOAD_URL = 'https://github.com/ishankpujari/omnix-website/releases/latest/download/Omnix.dmg'
-const VERSION = '0.1.5 beta'
+const VERSION = '0.1.6 beta'
 // ───────────────────────────────────────────────────────────────────────────
 
 const ready = !DOWNLOAD_URL.includes('YOUR-GITHUB-USERNAME')
