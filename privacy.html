@@ -104,6 +104,9 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     <h2>Cloud drives (Google Drive, Dropbox, OneDrive)</h2>
     <p>If you use a cloud drive's Mac app, its files appear in a folder on your Mac (in Library › CloudStorage), and Omnix searches that folder like your other folders. It reads files that are downloaded to your Mac; files kept online only are found by name, and Omnix never downloads them. Omnix doesn't sign in to these services or connect to them: the cloud drive's own app keeps the folder in sync. Deleting a file in that folder deletes it from the cloud drive too, and Omnix says so before anything is deleted.</p>
 
+    <h2>Your AI conversations (the AI tab)</h2>
+    <p>The AI tab reads the history that AI tools already save on your Mac: <strong>Claude Code</strong> (~/.claude), <strong>Codex</strong> (~/.codex), <strong>GitHub Copilot</strong> chats saved by VS Code, and <strong>Gemini CLI</strong> (~/.gemini). It reads the conversation, the commands an agent ran (with the end of their output, to check tests and builds), which files it changed and the lines it changed, and the usage numbers the tool records. ChatGPT and Claude website chats are read only if you import the export file those services email you. Omnix keeps an encrypted copy of these conversations (not your files, and not commands' full output) so they stay even if a tool deletes old sessions. Nothing is uploaded, and Omnix never signs in to any AI service. “Continue in another AI” copies a brief to your clipboard and opens the site you picked; nothing is sent until you paste it there yourself, and passwords, keys and sensitive numbers are hidden from the brief. “Undo changes” puts back the earlier version of files an agent changed, using the original that the tool recorded; the version it replaces goes to the Trash. You can turn off any tool, pause reading, leave out projects, remove a conversation, or forget all AI history in the AI tab's Settings.</p>
+
     <h2>Apple Photos and Apple Notes (off unless you turn them on)</h2>
     <p>In Settings you can choose to also search your <strong>Photos library</strong> and <strong>Apple Notes</strong>. Each is off until you turn it on, and macOS asks for your permission first. With Photos on, Omnix lists the photos in your library (name and date) and looks at the small copy already on your Mac to describe what each shows, the same way as pictures in folders. Nothing is downloaded from iCloud and nothing in Photos is changed. With Notes on, Omnix reads the text of your notes through the Notes app so it can search them; locked notes stay locked, and Omnix can't edit, move or delete notes. Photos and notes are never copied: their text and names aren't saved by Omnix, only the numbers that describe what a photo shows or what a note means. Opening a result shows it in Photos or Notes. Turn either off any time in Settings.</p>
 
@@ -184,7 +187,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   </section>
 
   <footer>
-    <p>Last updated November 6, 2026. If this page changes, the date above will change too.</p>
+    <p>Last updated November 14, 2026. If this page changes, the date above will change too.</p>
   </footer>
 </main>
 </body>
