@@ -261,7 +261,7 @@ details p { margin-top: 10px; color: var(--muted); }
 /* The logo and name, as in the app's sidebar: darker greens on light backgrounds, brighter on dark. */
 .logo img, .mini-brand img { display: block; border-radius: 0; filter: none; }
 .logo-name { display: flex; flex-direction: column; line-height: 1.05; }
-.logo-word { text-transform: uppercase; letter-spacing: .08em; font-weight: 700; background: linear-gradient(90deg, #5c7422, #809c28); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.logo-word { letter-spacing: .01em; font-weight: 700; background: linear-gradient(90deg, #5c7422, #809c28); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .logo-tagline { display: flex; flex-direction: column; gap: 2px; margin-top: 4px; color: #5c7422; font-size: 8.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
 @media (prefers-color-scheme: dark) {
   .logo-word { background-image: linear-gradient(90deg, #8fa83a, #d6ea70); }

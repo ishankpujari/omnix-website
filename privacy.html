@@ -60,7 +60,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 </head>
 <body>
 <main>
-  <p style="margin:0"><a href="index.html" style="text-decoration:none;font-weight:600">← Omnix</a></p>
+  <p style="margin:0"><a href="index.html" style="text-decoration:none;font-weight:600">← OmniX</a></p>
   <header>
     <span class="eyebrow">Omnix for Mac · Privacy</span>
     <h1>Your files stay on your Mac</h1>
@@ -105,13 +105,40 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     <p>If you use a cloud drive's Mac app, its files appear in a folder on your Mac (in Library › CloudStorage), and Omnix searches that folder like your other folders. It reads files that are downloaded to your Mac; files kept online only are found by name, and Omnix never downloads them. Omnix doesn't sign in to these services or connect to them: the cloud drive's own app keeps the folder in sync. Deleting a file in that folder deletes it from the cloud drive too, and Omnix says so before anything is deleted.</p>
 
     <h2>Your AI conversations (the AI tab)</h2>
+    <p class="note">The AI tab isn’t available in this version of Omnix yet: it shows “Coming soon”, and none of what follows runs. This section and the next describe how it will work once it’s turned on.</p>
     <p>The AI tab reads the history that AI tools already save on your Mac: <strong>Claude Code</strong> (~/.claude), <strong>Codex</strong> (~/.codex), <strong>GitHub Copilot</strong> chats saved by VS Code, and <strong>Gemini CLI</strong> (~/.gemini). It reads the conversation, the commands an agent ran (with the end of their output, to check tests and builds), which files it changed and the lines it changed, and the usage numbers the tool records. ChatGPT and Claude website chats are read only if you import the export file those services email you. Omnix keeps an encrypted copy of these conversations (not your files, and not commands' full output) so they stay even if a tool deletes old sessions. Nothing is uploaded, and Omnix never signs in to any AI service. “Continue in another AI” copies a brief to your clipboard and opens the site you picked; nothing is sent until you paste it there yourself, and passwords, keys and sensitive numbers are hidden from the brief. “Undo changes” puts back the earlier version of files an agent changed, using the original that the tool recorded; the version it replaces goes to the Trash. You can turn off any tool, pause reading, leave out projects, remove a conversation, or forget all AI history in the AI tab's Settings.</p>
+
+    <h2>AI features you choose to turn on</h2>
+    <p><strong>Browser extension (ChatGPT, Claude and Gemini websites).</strong> Only if you click Connect in AI settings and then add the extension in your browser. While you have a chat open on those three websites, the extension asks the site for that chat (with your existing sign-in, like the page itself does) and hands it to the Omnix app on your Mac, which saves it encrypted. It runs on no other websites and sends nothing anywhere else. You can pause it from the extension's button, and Disconnect in Omnix stops it.</p>
+    <p><strong>Omnix's copies of your projects (for Undo).</strong> While a coding agent works in a folder, and once an hour for folders AI worked in during the last two weeks, Omnix keeps encrypted copies of that folder's text files (not build folders, not files over 2 MB) so it can undo any AI tool's changes. Copies older than a week are deleted.</p>
+    <p><strong>Rules for AI agents.</strong> If you turn them on, Omnix adds a check to Claude Code's settings file. Claude Code then asks Omnix before each command or file change; Omnix answers on your Mac and keeps a short list of what it stopped. A copy of Claude Code's previous settings is kept.</p>
+    <p><strong>One memory for all your AIs.</strong> If you connect an AI tool (Claude Code, Codex, Cursor, Claude desktop or Gemini CLI), Omnix adds itself to that tool's list of helpers. That tool can then ask Omnix about your earlier AI conversations, your About me text and what's known about a project. Answers go only to that tool on your Mac, with keys and sensitive information hidden; the tool may then use them in its conversation with its own company, as with anything you tell it.</p>
+    <p><strong>Alerts.</strong> Omnix shows notifications on your Mac when an agent does something risky, when you paste a password or key into a chat, and when an AI hits its limit. They can be turned off in AI settings.</p>
+    <p><strong>Study, recap, plans and AI-use record.</strong> Made on your Mac from your saved conversations (study sets with Apple's on-device model). Plan prices you enter stay in Omnix's settings on your Mac.</p>
+    <h2>Drives you connect (external, USB and network drives)</h2>
+    <p>When you connect a drive, such as an external hard drive, a USB drive or a network drive like WD My Cloud Home, Omnix asks whether to include it. Nothing on the drive is read until you say yes. An included drive is searched, answered about and cleaned up like your Mac, but only while it’s connected.</p>
+    <p>So that reconnecting is quick, Omnix keeps what it read from a drive <strong>on that drive</strong>, in a hidden folder called <code>.omnix</code>, encrypted (AES-256) with the same key in your Mac’s Keychain, so only your Mac can read it. It’s kept out of Spotlight and Time Machine and contains a short note saying what it is. Nothing about a drive’s files is kept on your Mac; Omnix remembers only the drive’s name and your answer. If you choose “Just this time”, or the drive can’t be written to (for example, a Windows-formatted drive), Omnix reads it into memory only and forgets it when you eject it. Time Machine backup drives and opened disk images are never read or changed.</p>
+    <p>On network drives, Omnix reads file names and documents but not photos, and never downloads files that are stored online only. In Settings › Drives you can remove Omnix’s folder from a drive, forget a drive (its folder is removed now, or the next time you connect it), or remove Omnix’s folder from every connected drive before uninstalling.</p>
+
+    <h2>Checkups, charts and receipts</h2>
+    <p>When you ask Omnix a checkup question, it answers from what it already knows plus a few things macOS reports, all on your Mac:</p>
+    <ul>
+      <li><strong>“What would I lose if my Mac died?”</strong> Omnix looks at the documents it recognises as important (IDs, tax and bank papers, leases and so on), asks macOS whether iCloud holds each one, and reads macOS’s own Time Machine settings file for whether Time Machine is set up, its last backup date and which folders it skips. If you choose, it copies documents into iCloud Drive › <em>Omnix Safe Copies</em>; like anything in iCloud Drive, iCloud then uploads those copies to your iCloud account.</li>
+      <li><strong>“Which version is the latest?”</strong> compares documents’ text on your Mac. If you choose, older versions move into an “Older versions” folder.</li>
+      <li><strong>Sensitive files in open places</strong> lists IDs, tax forms and statements in Downloads, on the Desktop or in Public, shows the personal number it found with most digits hidden, and checks whether FileVault disk encryption is on. If you choose, those files move to Documents › Private.</li>
+      <li><strong>“What’s in System Data?”</strong> measures the size of folders in your Library (caches, logs, device backups, developer files) and lists your Mac’s local Time Machine snapshots. Folders macOS protects are shown as needing Full Disk Access; Omnix doesn’t try to get around that.</li>
+      <li><strong>Clearer names</strong> suggests names from what a document is, which you can edit before renaming.</li>
+      <li><strong>“…that I downloaded from irs.gov”</strong> uses the web address macOS records with most downloaded files and saved attachments, which Omnix reads only to answer that question.</li>
+      <li><strong>Charts</strong> (“graph my disk use over the past month”) are drawn from Omnix’s daily size notes and its list of your files.</li>
+      <li><strong>Return windows and warranties</strong> are found only in documents whose text shows they’re receipts or order confirmations, and only from a date printed in them.</li>
+    </ul>
+    <p>Nothing here is sent anywhere. Every change waits for your click, is logged, and can be undone.</p>
 
     <h2>Apple Photos and Apple Notes (off unless you turn them on)</h2>
     <p>In Settings you can choose to also search your <strong>Photos library</strong> and <strong>Apple Notes</strong>. Each is off until you turn it on, and macOS asks for your permission first. With Photos on, Omnix lists the photos in your library (name and date) and looks at the small copy already on your Mac to describe what each shows, the same way as pictures in folders. Nothing is downloaded from iCloud and nothing in Photos is changed. With Notes on, Omnix reads the text of your notes through the Notes app so it can search them; locked notes stay locked, and Omnix can't edit, move or delete notes. Photos and notes are never copied: their text and names aren't saved by Omnix, only the numbers that describe what a photo shows or what a note means. Opening a result shows it in Photos or Notes. Turn either off any time in Settings.</p>
 
     <h2>Updates</h2>
-    <p>Once a day, and when you click “Check now” in Settings, Omnix asks GitHub (where Omnix is published) whether a newer version is out. The request asks only for the newest version number; it carries no information about you, your files or how you use Omnix. Like any website visit, GitHub sees your internet address when it answers. If there's a newer version and you click “Update now”, Omnix downloads it from GitHub and checks its digital signature, so only updates made by Omnix's developer can install. You can turn this off with “Check for updates” in Settings; Omnix then never connects to the internet.</p>
+    <p>Shortly after Omnix opens and every few hours, and when you click “Check right now” in Settings, Omnix asks GitHub (where Omnix is published) whether a newer version is out. The request asks only for the newest version number; it carries no information about you, your files or how you use Omnix. Like any website visit, GitHub sees your internet address when it answers. If there's a newer version, an “Update available” button appears at the top of the window; when you click it, Omnix downloads it from GitHub and checks its digital signature, so only updates made by Omnix's developer can install. You can turn this off with “Check for updates” in Settings; Omnix then never connects to the internet.</p>
 
     <h2>Apple Intelligence</h2>
     <p>When Apple Intelligence is turned on, Omnix uses Apple's on-device language model to read answers out of your documents (“when does my lease end?”), understand unusual wording, suggest checklists and reply when you chat. The model runs on your Mac; Omnix doesn't use Apple's cloud (Private Cloud Compute), ChatGPT or any other online AI, so its requests don't appear in your Apple Intelligence Report. Omnix checks answers against your documents and never sends your files or questions anywhere. Search, safety checks and cleanup are fixed rules and work without Apple Intelligence.</p>
@@ -137,7 +164,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
           <tr><td>Items Omnix put in the Trash</td><td>To show how much space is waiting to be freed.</td><td>Locations and sizes only.</td></tr>
           <tr><td>“Wrong answer” reports</td><td>So you can tell the developer what went wrong, if you choose.</td><td>Your question and what was shown, with sensitive numbers hidden. The last 200. Only leaves the Mac if you export them and send the file yourself.</td></tr>
           <tr><td>Settings</td><td>Your choices, such as low-space alerts.</td><td>On or off choices only; not encrypted because there's nothing personal in them.</td></tr>
-          <tr><td>Disk usage and scan history</td><td>For the “when will my Mac be full” forecast.</td><td>One disk-usage number per day, plus folder names and totals. Kept in the app's own storage on this Mac.</td></tr>
+          <tr><td>Drives you included</td><td>So Omnix knows which drives to read when you connect them.</td><td>Each drive’s name and your answer (include, or leave alone). What Omnix read from a drive is kept on the drive itself, not here (see “Drives you connect”).</td></tr>
+          <tr><td>Disk usage and scan history</td><td>For the 30-day trend on the Storage page and charts.</td><td>One disk-usage number per day, plus folder names and totals. Kept in the app's own storage on this Mac.</td></tr>
         </tbody>
       </table>
     </div>
@@ -151,7 +179,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
       <li>Deleting means moving to the Trash. Omnix never empties your Trash; you do that in Finder.</li>
       <li>Moves, renames, copies, new folders and deletes can be undone.</li>
       <li>Similar photos (bursts and retakes) are only suggested for you to look at; the one with the most detail always stays.</li>
-      <li>Omnix only changes things in your own folders. It never touches macOS, Apple's apps, other apps' private data, or Docker's files (for Docker it shows you the command to run yourself).</li>
+      <li>On drives you included, Clean up works the same way and uses that drive’s own Trash. Time Machine drives are never changed.</li>
+      <li>Omnix only changes things in your own folders and on drives you included. It never touches macOS, Apple's apps, other apps' private data, or Docker's files (for Docker it shows you the command to run yourself).</li>
       <li>Some Clean up suggestions free space without deleting, and each also waits for your click: <strong>offloading</strong> an iCloud file removes only the copy on your Mac (only files iCloud says are fully uploaded; it stays in iCloud and in Finder); <strong>shrinking a video</strong> makes a smaller HEVC copy on your Mac, checks it, then moves the original to the Trash; <strong>zipping an old project</strong> makes and checks a zip next to it, then moves the folder to the Trash; <strong>moving to a drive</strong> copies a file to the external drive you plugged in, checks the copy is identical, then moves the original to the Trash.</li>
       <li>Blurry or accidental photos and saved memes are recognised on your Mac by Apple's built-in photo quality check and Omnix's own picture model. They're only suggested for you to look at.</li>
       <li>If you've allowed Omnix to see your Photos library, Clean up can suggest extra burst shots, exact duplicates, old screenshots and screen recordings, and blurry photos there. Removing them goes through Photos (macOS asks you to confirm), so they stay in Recently Deleted for 30 days. Favourites are never suggested.</li>
@@ -187,7 +216,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   </section>
 
   <footer>
-    <p>Last updated November 14, 2026. If this page changes, the date above will change too.</p>
+    <p>Last updated November 20, 2026. If this page changes, the date above will change too.</p>
   </footer>
 </main>
 </body>
