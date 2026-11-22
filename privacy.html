@@ -60,15 +60,15 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 </head>
 <body>
 <main>
-  <p style="margin:0"><a href="index.html" style="text-decoration:none;font-weight:600">← OmniX</a></p>
+  <p style="margin:0"><a href="index.html" style="text-decoration:none;font-weight:600">← Omnix</a></p>
   <header>
     <span class="eyebrow">Omnix for Mac · Privacy</span>
     <h1>Your files stay on your Mac</h1>
-    <p class="lede">Omnix helps you find, understand, organize and clean up your files. All of that happens on your Mac. Omnix doesn't upload your files or anything in them, doesn't need an account, and doesn't send anything about you or your files over the internet. Its only internet connection is checking for updates, which you can turn off.</p>
+    <p class="lede">Omnix helps you find, understand, organize and clean up your files. All of that happens on your Mac. Omnix doesn't upload your files or anything in them, doesn't need an account, and doesn't send anything about you or your files over the internet. It connects to the internet only to check for updates, to send feedback you choose to send, and to count users anonymously once a week; each can be turned off or simply not used.</p>
   </header>
 
   <div class="summary" aria-label="Summary">
-    <div><strong>Nothing is uploaded</strong><span>Omnix's only internet connection is a check for updates. It sends nothing about you or your files.</span></div>
+    <div><strong>Nothing is uploaded</strong><span>Omnix's internet connections are a check for updates, feedback you choose to send, and an anonymous weekly count. None of them sends your files or anything in them.</span></div>
     <div><strong>No account, no tracking</strong><span>No sign-in, analytics, ads or automatic crash reports.</span></div>
     <div><strong>Nothing changes without you</strong><span>Every move or cleanup waits for your click and can be undone.</span></div>
   </div>
@@ -137,6 +137,10 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     <h2>Apple Photos and Apple Notes (off unless you turn them on)</h2>
     <p>In Settings you can choose to also search your <strong>Photos library</strong> and <strong>Apple Notes</strong>. Each is off until you turn it on, and macOS asks for your permission first. With Photos on, Omnix lists the photos in your library (name and date) and looks at the small copy already on your Mac to describe what each shows, the same way as pictures in folders. Nothing is downloaded from iCloud and nothing in Photos is changed. With Notes on, Omnix reads the text of your notes through the Notes app so it can search them; locked notes stay locked, and Omnix can't edit, move or delete notes. Photos and notes are never copied: their text and names aren't saved by Omnix, only the numbers that describe what a photo shows or what a note means. Opening a result shows it in Photos or Notes. Turn either off any time in Settings.</p>
 
+    <h2>Ratings and problem reports</h2>
+    <p>Only when you press Send in “Rate Omnix” or “Report a problem”, Omnix sends what you wrote there, your rating, the email you chose to add (if any), the Omnix and macOS versions, and this Mac's random install number (below) to the developer, through a Google Form. The developer reads them in a private Google Sheet. Nothing is sent until you press Send, and never your files, file names, searches or anything Omnix has read.</p>
+    <h2>Counting users anonymously</h2>
+    <p>So the developer knows how many Macs use Omnix, once a week Omnix sends a random install number made on this Mac (not tied to your name, email, Apple account, files or the Mac's serial number) and the Omnix version, through the same Google Form. That's all: it says “a Mac uses Omnix”, not who or how. It's on unless you turn it off in Settings › Count users anonymously. Like any website visit, Google sees your internet address when it receives it.</p>
     <h2>Updates</h2>
     <p>Shortly after Omnix opens and every few hours, and when you click “Check right now” in Settings, Omnix asks GitHub (where Omnix is published) whether a newer version is out. The request asks only for the newest version number; it carries no information about you, your files or how you use Omnix. Like any website visit, GitHub sees your internet address when it answers. If there's a newer version, an “Update available” button appears at the top of the window; when you click it, Omnix downloads it from GitHub and checks its digital signature, so only updates made by Omnix's developer can install. You can turn this off with “Check for updates” in Settings; Omnix then never connects to the internet.</p>
 
@@ -216,7 +220,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   </section>
 
   <footer>
-    <p>Last updated November 20, 2026. If this page changes, the date above will change too.</p>
+    <p>Last updated November 22, 2026. If this page changes, the date above will change too.</p>
   </footer>
 </main>
 </body>
