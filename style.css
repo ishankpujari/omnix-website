@@ -286,3 +286,22 @@ details p { margin-top: 10px; color: var(--muted); }
 .noticed-demo p { margin: 0; display: grid; gap: 2px; font-size: 13.5px; }
 .noticed-demo p small { font-size: 11.5px; }
 @media (max-width: 700px) { .map-demo { grid-template-columns: 1fr; justify-items: center; } }
+
+/* Ask: example questions, as in the app (featured ones have a lime edge). */
+.ask-lede { margin: -4px 0 0; color: var(--muted); font-size: 13px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font-size: 11.5px; white-space: nowrap; }
+.chip.featured { border-color: var(--lime); background: var(--lime-soft); }
+
+/* Ask: a chart answer. A 2px line with a soft area, recessive grid and axis, as in the app. */
+.mini-chart { width: 100%; height: auto; display: block; overflow: visible; }
+.mini-chart-grid line { stroke: var(--line); stroke-width: 1; }
+.mini-chart-axis text { fill: var(--muted); font: 500 8.5px var(--mono); }
+.mini-chart-area { fill: var(--lime); opacity: .16; }
+.mini-chart-line { fill: none; stroke: var(--sage); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.mini-chart-dot { fill: var(--sage); stroke: var(--card); stroke-width: 2; }
+.convo.enter .mini-chart-line { stroke-dasharray: 420; stroke-dashoffset: 420; animation: draw 1.4s .2s ease forwards; }
+.convo.enter .mini-chart-area { animation: fade-in .8s .9s ease both; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: .16; } }
+@media (prefers-reduced-motion: reduce) { .convo.enter .mini-chart-line, .convo.enter .mini-chart-area { animation: none; stroke-dasharray: none; } }

@@ -67,6 +67,37 @@
             <div class="mini-disk"><b>182 GB free</b><i><em style="width:64%"></em></i><small>of 512 GB</small></div>
           </aside>
           <div class="mini-chat" aria-hidden="true">
+            <!-- Ask: where it starts, with example questions -->
+            <div class="convo" data-convo data-name="examples" data-tab="ask" hidden>
+              <div class="panel-title">Ask anything about your files</div>
+              <p class="ask-lede">Describe a file to find it, ask what’s in it, or check what’s safe to delete.</p>
+              <div class="chips">
+                <span class="chip featured">Any sensitive files left in my Downloads?</span>
+                <span class="chip featured">Plot my storage over the last month</span>
+                <span class="chip">Find my lease from last year</span>
+                <span class="chip">What did I download this week?</span>
+                <span class="chip">Show my screenshots from this month</span>
+                <span class="chip">Is it safe to delete node_modules?</span>
+                <span class="chip">What’s in System Data?</span>
+              </div>
+            </div>
+            <!-- Ask: a chart -->
+            <div class="convo" data-convo data-name="chart" data-tab="ask" hidden>
+              <div class="bubble">Plot my storage over the last month</div>
+              <div class="answer">
+                <span class="tag">Chart · space used, last 30 days</span>
+                <strong>+14 GB this month</strong>
+                <svg class="mini-chart" viewBox="0 0 300 132" role="img" aria-label="Space used rose from 311 GB to 325 GB over 30 days, with a jump on November 12">
+                  <g class="mini-chart-grid"><line x1="34" x2="294" y1="94.7" y2="94.7"/><line x1="34" x2="294" y1="60" y2="60"/><line x1="34" x2="294" y1="25.3" y2="25.3"/></g>
+                  <g class="mini-chart-axis"><text x="28" y="97.7" text-anchor="end">310 GB</text><text x="28" y="63" text-anchor="end">320 GB</text><text x="28" y="28.3" text-anchor="end">330 GB</text><text x="34" y="127">Oct 26</text><text x="186.4" y="127" text-anchor="middle">Nov 12</text><text x="294" y="127" text-anchor="end">Today</text></g>
+                  <path class="mini-chart-area" d="M34.0,90.5 L43.0,89.8 L51.9,88.8 L60.9,87.7 L69.9,87.4 L78.8,86.3 L87.8,84.3 L96.8,82.9 L105.7,81.1 L114.7,80.5 L123.7,79.1 L132.6,78.0 L141.6,77.3 L150.6,76.6 L159.5,75.9 L168.5,74.2 L177.4,72.5 L186.4,49.3 L195.4,47.9 L204.3,46.8 L213.3,46.1 L222.3,44.7 L231.2,43.0 L240.2,41.3 L249.2,47.9 L258.1,47.2 L267.1,45.8 L276.1,44.4 L285.0,43.4 L294.0,42.3 L294.0,112 L34.0,112 Z"/>
+                  <path class="mini-chart-line" d="M34.0,90.5 L43.0,89.8 L51.9,88.8 L60.9,87.7 L69.9,87.4 L78.8,86.3 L87.8,84.3 L96.8,82.9 L105.7,81.1 L114.7,80.5 L123.7,79.1 L132.6,78.0 L141.6,77.3 L150.6,76.6 L159.5,75.9 L168.5,74.2 L177.4,72.5 L186.4,49.3 L195.4,47.9 L204.3,46.8 L213.3,46.1 L222.3,44.7 L231.2,43.0 L240.2,41.3 L249.2,47.9 L258.1,47.2 L267.1,45.8 L276.1,44.4 L285.0,43.4 L294.0,42.3"/>
+                  <circle class="mini-chart-dot" cx="186.4" cy="49.3" r="4"/>
+                  <circle class="mini-chart-dot" cx="294" cy="42.3" r="4"/>
+                </svg>
+                <small>The jump on Nov 12: Xcode build files (6.2 GB), which Clean up can free. Emptying the Trash gave back 2.4 GB on Nov 19.</small>
+              </div>
+            </div>
             <!-- Ask: an answer from inside a document -->
             <div class="convo" data-convo data-name="lease" data-tab="ask">
               <div class="bubble">When does my lease end?</div>
@@ -265,14 +296,14 @@
       <div>
         <p class="kicker">Privacy</p>
         <h2>Your files never leave your Mac.</h2>
-        <p class="lede">Most AI tools send your documents to a server to read them. Omnix doesn’t. It has no account, never uploads anything, and does all of its reading and thinking on your Mac. It goes online only to check for updates, to send feedback you choose to send, and for an anonymous weekly count of users that you can turn off.</p>
+        <p class="lede">Most AI tools send your documents to a server to read them. Omnix doesn’t. It has no account, never uploads anything, and does all of its reading and thinking on your Mac. It goes online only to check for updates, to send feedback you choose to send, and for a one-time anonymous count of users that you can turn off.</p>
         <a class="link light" href="privacy.html">Read the full privacy policy →</a>
       </div>
       <ul class="facts">
         <li><b>On-device AI only.</b> Omnix’s own AI models (for meaning and pictures) are built into the app, and answers can use Apple’s on-device model. All of it runs on your Mac. Not ChatGPT, not any cloud AI.</li>
         <li><b>Encrypted on your Mac.</b> What it saves for fast search is encrypted with a key in your Keychain, with sensitive information hidden.</li>
         <li><b>You’re in control.</b> Every move or delete shows a plan first, goes to the Trash, and can be undone. Photos, Notes and Mail are off until you turn them on.</li>
-        <li><b>No tracking.</b> No ads, no automatic crash reports, nothing about what you search or open. The only count is a random number once a week, so the developer knows how many Macs use Omnix; you can turn it off. This website has no trackers.</li>
+        <li><b>No tracking.</b> No ads, no automatic crash reports, nothing about what you search or open. The only count is a random number, sent once per Mac, so the developer knows how many Macs use Omnix; you can turn it off. This website has no trackers.</li>
       </ul>
     </div>
   </section>
@@ -338,7 +369,7 @@
       <div>
         <p class="kicker">Beta</p>
         <h2>Help shape Omnix.</h2>
-        <p>When an answer is wrong, tap <b>Wrong answer?</b> under it. Reports stay on your Mac until you choose to export them in <b>Settings</b> and send them. If something breaks, <b>Settings › Create problem report</b> writes a short report (no file names) for you to send.</p>
+        <p>When an answer is wrong, tap <b>Wrong answer?</b> under it. To rate Omnix or report a problem, use <b>Settings › Rate Omnix or report a problem</b>. Either way, a short form opens in Omnix: what you write goes straight to the developer when you press Send, and nothing is kept on your Mac.</p>
       </div>
     </div>
   </section>
@@ -349,7 +380,7 @@
       <p class="kicker">FAQ</p>
       <h2>Questions.</h2>
       <details><summary>Is it free?</summary><p>Yes, while it’s in beta.</p></details>
-      <details><summary>Does Omnix use ChatGPT or send my files anywhere?</summary><p>No. It uses only Apple’s on-device model, which runs on your Mac. Omnix never sends your files or questions anywhere and has no account. It goes online only to check for updates, to send feedback when you press Send, and for an anonymous weekly count of users (a random number, nothing about you), each of which you can turn off. Search, safety checks and cleanup follow fixed rules and work even without Apple Intelligence.</p></details>
+      <details><summary>Does Omnix use ChatGPT or send my files anywhere?</summary><p>No. It uses only Apple’s on-device model, which runs on your Mac. Omnix never sends your files or questions anywhere and has no account. It goes online only to check for updates, to send feedback when you press Send, and for a one-time anonymous count of users (a random number, nothing about you), each of which you can turn off. Search, safety checks and cleanup follow fixed rules and work even without Apple Intelligence.</p></details>
       <details><summary>What does it save, and where?</summary><p>The text it has read, what your files mean, your chat, Clean up’s history and your undo history, in its own folder on your Mac (~/Library/Application Support/com.omnix.desktop), encrypted, with sensitive numbers hidden. You can delete any of it in Settings.</p></details>
       <details><summary>How do updates work?</summary><p>Once a day Omnix checks whether a newer version is out. If there is one, it shows “Update now”, and one click downloads, installs and restarts it. Your search, settings and history stay. The check sends nothing about you or your files, and you can turn it off in Settings.</p></details>
       <details><summary>Why is the download so big?</summary><p>About 700 MB, because the AI that understands your documents and pictures is built into the app instead of running on a server. That’s what lets it work offline and keep your files private.</p></details>

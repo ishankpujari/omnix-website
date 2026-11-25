@@ -3,7 +3,7 @@
 // ── Set these before publishing ────────────────────────────────────────────
 // The download: a GitHub Release asset named Omnix.dmg always works with "latest".
 const DOWNLOAD_URL = 'https://github.com/ishankpujari/omnix-website/releases/latest/download/Omnix.dmg'
-const VERSION = '0.3.6 beta'
+const VERSION = '0.3.7 beta'
 // ───────────────────────────────────────────────────────────────────────────
 
 const ready = !DOWNLOAD_URL.includes('YOUR-GITHUB-USERNAME')
@@ -18,8 +18,9 @@ for (const label of document.querySelectorAll('[data-version]')) label.textConte
 const convos = [...document.querySelectorAll('[data-convo]')]
 const tabs = [...document.querySelectorAll('.mini-link[data-tab]')]
 const input = document.querySelector('[data-input]')
-// The order the app shows things in: Storage and its map first, then Ask, then Clean up.
-const names = ['storage', 'map', 'lease', 'noticed', 'rent', 'picture', 'cleanup', 'plan', 'checklist']
+// The order the app shows things in: Storage and its map first, then Ask (starting with its
+// example questions, and a chart), then Clean up.
+const names = ['storage', 'map', 'examples', 'lease', 'chart', 'noticed', 'rent', 'picture', 'cleanup', 'plan', 'checklist']
 const order = names.map((name) => convos.findIndex((convo) => convo.dataset.name === name)).filter((index) => index >= 0)
 const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 function show(convo) {
